@@ -3,7 +3,8 @@ export const authenticateToken = (req, res, next) => {
     // TODO: verify the token exists and add the user data to the request object
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-        return res.status(401).json({ message: 'Access Denied: No Token Provided' });
+        res.status(401).json({ message: 'Access Denied: No Token Provided' });
+        return;
     }
     const token = authHeader.split(' ')[1];
     try {
@@ -18,5 +19,6 @@ export const authenticateToken = (req, res, next) => {
     }
     catch (error) {
         res.status(403).json({ message: 'Invalid or Expired Token' });
+        next();
     }
 };

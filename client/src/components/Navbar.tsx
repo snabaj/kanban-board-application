@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import auth from '../utils/auth';
+import Board from '../pages/Board';
 
 const Navbar = () => {
   const [ loginCheck, setLoginCheck ] = useState(false);
@@ -27,6 +28,10 @@ const Navbar = () => {
           <li className='nav-item'>
             <button type='button'>
               <Link to='/login'>Login</Link>
+            </button>
+
+            <button type='button'>
+              <Link to='/create'>New Ticket</Link>
             </button>
           </li>
         ) : (
