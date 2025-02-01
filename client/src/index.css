@@ -24,11 +24,11 @@ input:-moz-placeholder {
 
 a {
   font-weight: 500;
-  color: #000000;
+  color: black;
   text-decoration: inherit;
 }
 a:hover {
-  color: #f8f8fb;
+  color: white
 }
 
 body {
@@ -55,13 +55,17 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #faf8f8;
+  color: black;
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
-  border-color: #535bf2;
-  
+  background-color: black;
+  color: white
+
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -116,8 +120,12 @@ tbody tr:nth-child(odd) {
   list-style: none;
 }
 
+.nav-title a:hover {
+  text-decoration: underline;
+}
+
 .nav-link {
-  color: #fff;
+  color: #090000;
   text-decoration: none;
 }
 
