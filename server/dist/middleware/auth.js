@@ -8,7 +8,7 @@ export const authenticateToken = (req, res, next) => {
     }
     const token = authHeader.split(' ')[1];
     try {
-        const secretKey = process.env.JWT_SECRET; // Ensure you have a secret key in your environment variables
+        const secretKey = process.env.JWT_SECRET_KEY; // Ensure you have a secret key in your environment variables
         if (!secretKey) {
             throw new Error('JWT secret key is not set');
         }

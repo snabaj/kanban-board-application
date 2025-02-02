@@ -16,7 +16,7 @@ export const login = async (req, res) => {
             res.status(401).json({ message: 'Invalid Username or Password' });
             return;
         }
-        const secretKey = process.env.JWT_SECRET;
+        const secretKey = process.env.JWT_SECRET_KEY;
         if (!secretKey) {
             throw new Error('JWT secret key is not set');
         }

@@ -19,7 +19,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
-    const secretKey = process.env.JWT_SECRET as string;
+    const secretKey = process.env.JWT_SECRET_KEY as string;
     if (!secretKey) {
       throw new Error('JWT secret key is not set');
     }
