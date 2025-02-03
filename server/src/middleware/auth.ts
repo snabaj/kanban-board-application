@@ -18,6 +18,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
   try {
     const secretKey = process.env.JWT_SECRET_KEY as string; // Ensure you have a secret key in your environment variables
     if (!secretKey) {
+      console.error('JWT secret key is not set');
       throw new Error('JWT secret key is not set');
     }
 
@@ -29,6 +30,5 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
     next();
   } catch (error) {
     res.status(403).json({ message: 'Invalid or Expired Token' });
-    next();
   }
 };
