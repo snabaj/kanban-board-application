@@ -6,17 +6,20 @@ const login = async (userInfo: UserLogin) => {
     const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('id_token') || ''}`
       },
       body: JSON.stringify(userInfo)
     });
 
     if (!response.ok) {
-      const errorMessage = await response.text(); // Read error response if available
+      const errorMessage = await response.json(); // Read error response if available
       throw new Error(`Login failed: ${errorMessage}`);
     }
 
-    return await response.json();
+    const data = await response.json();
+    localStorage.setItem('id_token', data.token);
+    return data;
   } catch (error) {
     console.error('Login error:', error);
     throw new Error('Network error or server is unreachable');
