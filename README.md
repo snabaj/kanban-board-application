@@ -25,6 +25,8 @@ To start the application, the user runs the command “npm run start:dev”. Onc
 Below is a link to the deployed application on Render.
 
 Below are screenshots to showcase the applications functionality.
+![LoginIn page](<client/src/assets/Screenshot 2025-02-04 at 10.48.01 AM.png>)
+![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
 
 ## License
 
