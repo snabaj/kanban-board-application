@@ -6,6 +6,6 @@ const router = Router();
 router.use('/auth', authRoutes);
 router.use('/api', authenticateToken, apiRoutes);
 router.get('/', (_req, res) => {
-    res.json({ message: 'Welcome to the Ticketing System API' });
+    res.send('Hello, World!');
 });
 export default router;
