@@ -1,7 +1,5 @@
 const forceDatabaseRefresh = false;
 
-import path from 'path';
-
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -10,17 +8,13 @@ import routes from './routes/index.js';
 import { sequelize } from './models/index.js';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 10000;
 
 // Serves static files in the entire client's dist folder
 app.use(express.static('../client/dist'));
 
 app.use(express.json());
 app.use(routes);
-
-app.get('/', (_req, res) => {
-  res.send(path.join(__dirname, '../client/dist/index.html'));
-});
 
 sequelize.sync({force: forceDatabaseRefresh}).then(() => {
   app.listen(PORT, () => {
