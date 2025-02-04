@@ -25,7 +25,7 @@ To start the application, the user runs the command “npm run start:dev”. Onc
 Below is a link to the deployed application on Render.
 https://kanban-board-application-rv08.onrender.com
 
-Below are screenshots to showcase the applications functionality.
+Below are preview images of the deployed application.
 ![LoginIn page](<client/src/assets/Screenshot 2025-02-04 at 10.48.01 AM.png>)
 ![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
 
