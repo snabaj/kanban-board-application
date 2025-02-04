@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 export const authenticateToken = (req, res, next) => {
-    // TODO: verify the token exists and add the user data to the request object
     const authHeader = req.headers.authorization;
     console.log('Authenticating token...');
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -10,7 +9,7 @@ export const authenticateToken = (req, res, next) => {
     const token = authHeader.split(' ')[1];
     try {
         console.log('Verifying token...');
-        const secretKey = process.env.JWT_SECRET_KEY; // Ensure you have a secret key in your environment variables
+        const secretKey = process.env.JWT_SECRET_KEY;
         if (!secretKey) {
             console.error('JWT secret key is not set');
             throw new Error('JWT secret key is not set');

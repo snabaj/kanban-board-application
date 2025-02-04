@@ -61,11 +61,6 @@ button {
   transition: border-color 0.25s;
 }
 
-/*button:hover {
-  color: black;
-
-}*/
-
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -191,7 +186,6 @@ tbody tr:nth-child(odd) {
   display: block;
   margin-left: auto;
 }
-
 
 .form {
   width: 40%;
