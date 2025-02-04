@@ -8,6 +8,7 @@ interface JwtPayload {
 export const authenticateToken = (req: Request, res: Response, next: NextFunction): void => {
   // TODO: verify the token exists and add the user data to the request object
   const authHeader = req.headers.authorization;
+  console.log('Authenticating token...');
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
     res.status(401).json({ message: 'Access Denied: No Token Provided' });
     return;
@@ -16,6 +17,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
   const token = authHeader.split(' ')[1];
 
   try {
+    console.log('Verifying token...');
     const secretKey = process.env.JWT_SECRET_KEY as string; // Ensure you have a secret key in your environment variables
     if (!secretKey) {
       console.error('JWT secret key is not set');

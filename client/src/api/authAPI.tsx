@@ -3,21 +3,22 @@ import { UserLogin } from "../interfaces/UserLogin";
 const login = async (userInfo: UserLogin) => {
   // TODO: make a POST request to the login route
   try {
-    const response = await fetch('/api/login', {
+    const response = await fetch('/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('id_token') || ''}`
+        //'Authorization': `Bearer ${localStorage.getItem('id_token') || ''}`
       },
       body: JSON.stringify(userInfo)
     });
 
+    const data = await response.json();
+   
     if (!response.ok) {
-      const errorMessage = await response.json(); // Read error response if available
-      throw new Error(`Login failed: ${errorMessage}`);
+      
+      throw new Error(`Login failed`);
     }
 
-    const data = await response.json();
     localStorage.setItem('id_token', data.token);
     return data;
   } catch (error) {
