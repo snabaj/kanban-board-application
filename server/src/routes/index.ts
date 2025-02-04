@@ -13,6 +13,8 @@ router.use('/api', authenticateToken, apiRoutes);
     //res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
   //});
 
-router.get('/', router)
+//router.get('/');
+
+
 
 export default router;

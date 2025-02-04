@@ -9,5 +9,5 @@ router.use('/api', authenticateToken, apiRoutes);
 //router.get('/', (_, res) => {
 //res.sendFile(path.join(__dirname, '../../client/dist/index.html'));
 //});
-router.get('/', router);
+//router.get('/');
 export default router;
