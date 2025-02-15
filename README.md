@@ -27,6 +27,7 @@ https://kanban-board-application-rv08.onrender.com
 
 Below are preview images of the deployed application.
 ![LoginIn page](<client/src/assets/Screenshot 2025-02-04 at 10.48.01 AM.png>)
+![New Ticket page](<client/src/assets/Screenshot 2025-02-15 at 5.16.19 PM.png>)
 ![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
 
 ## License
