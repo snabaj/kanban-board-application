@@ -22,13 +22,14 @@ Configure environment variables for JWT authentication and database connections 
 
 To start the application, the user runs the command “npm run start:dev”. Once running, the user navigates to the login page to authenticate. Users must enter their credentials, which will be verified using JSON Web Tokens (JWT). For this project, use seed data in user-seeds file for login. Successful authentication redirects users to the Kanban board, where they can manage tasks. Users can create a new ticket, edit an existing ticket, or delete a ticket. The application ensures JWT storage security, session expiration handling, and logout mechanisms for a seamless user experience.
 
-Below is a link to the deployed application on Render.
-https://kanban-board-application-rv08.onrender.com
 
-Below are preview images of the deployed application.
+## Preview images of the deployed application.
 ![LoginIn page](<client/src/assets/Screenshot 2025-02-04 at 10.48.01 AM.png>)
 ![New Ticket page](<client/src/assets/Screenshot 2025-02-15 at 5.16.19 PM.png>)
 ![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
+
+## Link to the deployed application on Render.
+https://kanban-board-application-rv08.onrender.com
 
 ## License
 
