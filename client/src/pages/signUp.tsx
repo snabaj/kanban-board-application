@@ -29,6 +29,7 @@ const SignUp = () => {
       const data = await signup({
         username: signUpData.username,
         password: signUpData.password,
+        confirmPassword: signUpData.confirmPassword,
       });
       Auth.login(data.token);
     } catch (err) {
