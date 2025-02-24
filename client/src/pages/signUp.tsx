@@ -1,6 +1,6 @@
 import { useState, FormEvent, ChangeEvent } from "react";
 import Auth from '../utils/auth';
-import { signup } from "../api/authAPI";
+import { createUser } from "../api/userAPI";
 
 const SignUp = () => {
   const [signUpData, setSignUpData] = useState({
@@ -26,10 +26,9 @@ const SignUp = () => {
     }
 
     try {
-      const data = await signup({
+      const data = await createUser({
         username: signUpData.username,
         password: signUpData.password,
-        confirmPassword: signUpData.confirmPassword,
       });
       Auth.login(data.token);
     } catch (err) {
