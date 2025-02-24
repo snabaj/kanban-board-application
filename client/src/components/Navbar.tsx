@@ -31,6 +31,10 @@ const Navbar = () => {
             </button>
 
             <button type='button'>
+              <Link to='/signup'>Sign Up</Link>
+            </button>
+
+            <button type='button'>
               <Link to='/create'>New Ticket</Link>
             </button>
           </li>
