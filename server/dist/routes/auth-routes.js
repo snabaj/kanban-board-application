@@ -26,4 +26,20 @@ export const login = async (req, res) => {
 const router = Router();
 // POST /login - Login a user
 router.post('/login', login);
+export const signup = async (req, res) => {
+    const { username, password } = req.body;
+    console.log('Signing up user:', username);
+    const newUser = await User.create({ username, password });
+    if (!newUser) {
+        return res.status(500).json({ message: 'Internal Server Error' });
+    }
+    const secretKey = process.env.JWT_SECRET_KEY;
+    if (!secretKey) {
+        console.error('JWT secret key is not set');
+        return res.status(500).json({ message: 'Internal Server Error' });
+    }
+    const token = jwt.sign({ username: newUser.username }, secretKey, { expiresIn: '1h', });
+    return res.json({ token });
+};
+router.post('/signup', signup);
 export default router;

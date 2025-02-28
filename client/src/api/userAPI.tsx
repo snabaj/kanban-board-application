@@ -24,7 +24,7 @@ const retrieveUsers = async () => {
 
 const createUser = async (user: any) => {
   try {
-    const response = await fetch('/api/users', {
+    const response = await fetch('/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
