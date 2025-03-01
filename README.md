@@ -1,35 +1,96 @@
 # Kanban Board Application
 
-## Description
+[![Vite](https://img.shields.io/badge/Vite-4.x-blue.svg)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853d?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=flat&logo=sequelize&logoColor=white)](https://sequelize.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![JWT Authentication](https://img.shields.io/badge/JWT-Authentication-orange)](https://jwt.io/)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
- The Kanban Board Application is a full-stack application created using React, TypeScript, Vite, Node JS, and Sequelize. The Kanban board uses authentication with JSON Web Tokens to provide a secure and scalable method for verifying user identities, so that the user can securely access and manage their work tasks. JWTs are compact, URL-safe tokens that encode a user's authentication data, allowing servers to authenticate requests while enhancing security.
+A full-stack application built with React, TypeScript, Vite, Node.js, PostgreSQL, and Sequelize. The application implements user authentication and authorization using JSON Web Tokens (JWT) to provide a secure and scalable method for user verification.
 
 ## Table of Contents
 
-- Installation
-- Usage
-- License
-- Contributing
-- Tests
-- Questions
+- [Kanban Board Application](#kanban-board-application)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+    - [Key Features:](#key-features)
+  - [Installation](#installation)
+    - [Prerequisites:](#prerequisites)
+    - [Steps:](#steps)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+## Description
+
+The **Kanban Board Application** allows users to securely sign up, log in, and manage their work tasks efficiently. It integrates authentication with **JWT** to protect user sessions and securely store credentials in a PostgreSQL database. 
+
+### Key Features:
+- **User Authentication:** Users can sign up with a username and password, which are stored in the database and authenticated using JWT.
+- **Secure Login:** Users log in with credentials, and upon successful authentication, they are redirected to the Kanban board.
+- **Task Management:** Users can create, edit, and delete task tickets for better workflow organization.
+- **Persistent Sessions:** JWT ensures secure session management with automatic expiration handling.
+- **Logout Mechanism:** Users can securely log out, invalidating their session.
 
 ## Installation
 
-To set up the application, ensure you have Node.js, Vite, and Sequelize installed. Clone the repository and navigate into the project directory. Install dependencies using: npm install.
-Configure environment variables for JWT authentication and database connections in a .env file.
+### Prerequisites:
+Ensure you have the following installed:
+- **[Node.js](https://nodejs.org/)**
+- **[Vite](https://vitejs.dev/)**
+- **[PostgreSQL](https://www.postgresql.org/)**
+- **[Sequelize](https://sequelize.org/)**
+- **[VS Code](https://code.visualstudio.com/)**
+
+### Steps:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/snabaj/kanban-board-app.git
+   cd kanban-board-application
+
+2. Install dependencies:
+   ```
+   npm install
+    ```
+
+3. Configure environment variables: Create a .env file in the root directory and set up:
+   ```
+   DATABASE_URL=your_postgres_connection_url
+   JWT_SECRET=your_jwt_secret_key
+    ```
+4. Run database migrations:
+    ```
+    npx sequelize-cli db:migrate
+    ```
 
 ## Usage
 
-To start the application, the user runs the command “npm run start:dev”. Once running, the user navigates to the login page to authenticate. Users must enter their credentials, which will be verified using JSON Web Tokens (JWT). For this project, use seed data in user-seeds file for login. Successful authentication redirects users to the Kanban board, where they can manage tasks. Users can create a new ticket, edit an existing ticket, or delete a ticket. The application ensures JWT storage security, session expiration handling, and logout mechanisms for a seamless user experience.
+1. Start the application:
+   ```
+   npm run start:dev
+   ```
+2. Navigate to the login page and sign in with your credentials.
+3. Manage your Kanban board:
+    - Add new tasks.
+    - Edit existing tasks.
+    - Delete tasks when completed.
+4. Secure authentication:
+    - User sessions are managed using JWT tokens.
+    - JWTs are stored securely, and session expiration is handled efficiently.
+    - Users can log out, ensuring their session is invalidated.
 
 
 ## Preview images of the deployed application.
+### Login Page
 ![LoginIn page](<client/src/assets/Screenshot 2025-02-04 at 10.48.01 AM.png>)
+### Create New Ticket
 ![New Ticket page](<client/src/assets/Screenshot 2025-02-15 at 5.16.19 PM.png>)
+### Ticket Management
 ![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
 
-## Link to the deployed application on Render.
-https://kanban-board-application-rv08.onrender.com
+🚀 **[Try the live Kanban Board application on Render](https://kanban-board-application-rv08.onrender.com)**
 
 ## License
 
@@ -37,7 +98,24 @@ This project is licensed under the [MIT](https://opensource.org/licenses/MIT) li
 
 ## Contributing
 
-If you wish to contribute to this project, feel free to fork the repository, create a branch, and submit a pull request with your changes. Ensure your code is well-documented, and your changes are tested before submitting.
+Contributions are welcome! If you’d like to improve this project, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+   ```
+   git checkout -b feature/your-feature
+   ```
+3. Make your changes and commit:
+    ```
+    git commit -m "Add feature: description"
+    ```
+4. Push the branch:
+   ```
+   git push origin feature/your-feature
+   ```
+5. Open a pull request.
+
+Please ensure your code is well-documented and tested before submitting.
 
 ## Tests
 
