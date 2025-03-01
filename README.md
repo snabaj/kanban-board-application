@@ -20,14 +20,22 @@ A full-stack application built with React, TypeScript, Vite, Node.js, PostgreSQL
   - [Installation](#installation)
     - [Prerequisites:](#prerequisites)
     - [Steps:](#steps)
+  - [Usage](#usage)
+  - [Preview images of the deployed application.](#preview-images-of-the-deployed-application)
+    - [Login Page](#login-page)
+    - [Create New Ticket](#create-new-ticket)
+    - [Ticket Management](#ticket-management)
+  - [License](#license)
+  - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
 
 ## Description
 
-The **Kanban Board Application** allows users to securely sign up, log in, and manage their work tasks efficiently. It integrates authentication with **JWT** to protect user sessions and securely store credentials in a PostgreSQL database. 
+The **Kanban Board Application** allows users to securely sign up, log in, and manage their work tasks efficiently. It integrates authentication with **JWT** to protect user sessions and securely store credentials in a PostgreSQL database.
 
 ### Key Features:
+
 - **User Authentication:** Users can sign up with a username and password, which are stored in the database and authenticated using JWT.
 - **Secure Login:** Users log in with credentials, and upon successful authentication, they are redirected to the Kanban board.
 - **Task Management:** Users can create, edit, and delete task tickets for better workflow organization.
@@ -37,7 +45,9 @@ The **Kanban Board Application** allows users to securely sign up, log in, and m
 ## Installation
 
 ### Prerequisites:
+
 Ensure you have the following installed:
+
 - **[Node.js](https://nodejs.org/)**
 - **[Vite](https://vitejs.dev/)**
 - **[PostgreSQL](https://www.postgresql.org/)**
@@ -45,25 +55,30 @@ Ensure you have the following installed:
 - **[VS Code](https://code.visualstudio.com/)**
 
 ### Steps:
+
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/snabaj/kanban-board-app.git
    cd kanban-board-application
 
+   ```
+
 2. Install dependencies:
+
    ```
    npm install
-    ```
+   ```
 
 3. Configure environment variables: Create a .env file in the root directory and set up:
    ```
    DATABASE_URL=your_postgres_connection_url
    JWT_SECRET=your_jwt_secret_key
-    ```
+   ```
 4. Run database migrations:
-    ```
-    npx sequelize-cli db:migrate
-    ```
+   ```
+   npx sequelize-cli db:migrate
+   ```
 
 ## Usage
 
@@ -73,21 +88,26 @@ Ensure you have the following installed:
    ```
 2. Navigate to the login page and sign in with your credentials.
 3. Manage your Kanban board:
-    - Add new tasks.
-    - Edit existing tasks.
-    - Delete tasks when completed.
+   - Add new tasks.
+   - Edit existing tasks.
+   - Delete tasks when completed.
 4. Secure authentication:
-    - User sessions are managed using JWT tokens.
-    - JWTs are stored securely, and session expiration is handled efficiently.
-    - Users can log out, ensuring their session is invalidated.
-
+   - User sessions are managed using JWT tokens.
+   - JWTs are stored securely, and session expiration is handled efficiently.
+   - Users can log out, ensuring their session is invalidated.
 
 ## Preview images of the deployed application.
+
 ### Login Page
+
 ![LoginIn page](<client/src/assets/Screenshot 2025-02-04 at 10.48.01 AM.png>)
+
 ### Create New Ticket
+
 ![New Ticket page](<client/src/assets/Screenshot 2025-02-15 at 5.16.19 PM.png>)
+
 ### Ticket Management
+
 ![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
 
 🚀 **[Try the live Kanban Board application on Render](https://kanban-board-application-rv08.onrender.com)**
@@ -106,9 +126,9 @@ Contributions are welcome! If you’d like to improve this project, follow these
    git checkout -b feature/your-feature
    ```
 3. Make your changes and commit:
-    ```
-    git commit -m "Add feature: description"
-    ```
+   ```
+   git commit -m "Add feature: description"
+   ```
 4. Push the branch:
    ```
    git push origin feature/your-feature
@@ -124,4 +144,3 @@ There are no specific tests currently included in this project, but you can add 
 ## Questions
 
 Please contact me with any questions you may have at [snabajja@gmail.com](mailto:snabajja@gmail.com) or visit my GitHub profile at [snabaj](https://github.com/snabaj).
-
