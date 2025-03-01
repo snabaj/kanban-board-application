@@ -25,6 +25,7 @@ A full-stack application built with React, TypeScript, Vite, Node.js, PostgreSQL
     - [Login Page](#login-page)
     - [Create New Ticket](#create-new-ticket)
     - [Ticket Management](#ticket-management)
+    - [🚀 **Try the live Kanban Board application on Render**](#-try-the-live-kanban-board-application-on-render)
   - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
@@ -110,7 +111,7 @@ Ensure you have the following installed:
 
 ![Ticket page](<client/src/assets/Screenshot 2025-02-04 at 10.52.24 AM.png>)
 
-🚀 **[Try the live Kanban Board application on Render](https://kanban-board-application-rv08.onrender.com)**
+### 🚀 **[Try the live Kanban Board application on Render](https://kanban-board-application-rv08.onrender.com)**
 
 ## License
 
